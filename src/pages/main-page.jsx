@@ -33,8 +33,7 @@ function MainPage() {
       <div className="bg-gray-50 text-gray-800 min-h-screen">
         <Navbar />
         <Routes>
-          <Route
-            path="/"
+          <Route path="/"
             element={
               <>
                 <Hero />
@@ -46,6 +45,12 @@ function MainPage() {
               </>
             }
           />
+          <Route path="/home" element={<Hero />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/testimonials" element={<Testimonials />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
       </div>

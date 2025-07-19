@@ -1,5 +1,5 @@
 import { FaReact, FaNodeJs, FaFigma, FaGoogle, FaFacebook } from 'react-icons/fa'
-import { SiNextdotjs, SiTailwindcss, SiAdobephotoshop, SiAdobeillustrator, SiTypescript, SiJavascript, SiMongodb, SiExpress, SiWordpress } from 'react-icons/si'
+import { SiNextdotjs, SiTailwindcss, SiAdobephotoshop, SiAdobeillustrator, SiTypescript, SiJavascript, SiMongodb, SiExpress, SiWordpress, SiFlutter, SiDjango, SiLaravel } from 'react-icons/si'
 import { TbBrandReactNative } from 'react-icons/tb'
 
 const Skills = () => {
@@ -7,7 +7,10 @@ const Skills = () => {
     { name: 'React', icon: <FaReact className="text-4xl text-blue-500" />, level: '95%' },
     { name: 'Next.js', icon: <SiNextdotjs className="text-4xl text-gray-800 dark:text-white" />, level: '90%' },
     { name: 'React Native', icon: <TbBrandReactNative className="text-4xl text-blue-400" />, level: '85%' },
+    { name: 'Flutter', icon: <SiFlutter className="text-4xl text-blue-400" />, level: '80%' },
     { name: 'Node.js', icon: <FaNodeJs className="text-4xl text-green-600" />, level: '90%' },
+    { name: 'Django', icon: <SiDjango className="text-4xl text-green-800" />, level: '75%' },
+    { name: 'Laravel', icon: <SiLaravel className="text-4xl text-red-500" />, level: '70%' },
     { name: 'TypeScript', icon: <SiTypescript className="text-4xl text-blue-600" />, level: '85%' },
     { name: 'JavaScript', icon: <SiJavascript className="text-4xl text-yellow-400" />, level: '95%' },
     { name: 'MongoDB', icon: <SiMongodb className="text-4xl text-green-500" />, level: '80%' },
@@ -32,6 +35,29 @@ const Skills = () => {
     { name: 'Content Writing', icon: <FaGoogle className="text-4xl text-red-500" />, level: '85%' },
   ]
 
+  const developmentAreas = [
+    {
+      title: "Mobile App Development",
+      description: "Building cross-platform mobile applications using React Native and Flutter for both iOS and Android platforms.",
+      icon: <TbBrandReactNative className="text-4xl text-blue-500" />
+    },
+    {
+      title: "Website Development",
+      description: "Creating responsive, SEO-friendly websites using modern frameworks like Next.js, Django, and Laravel.",
+      icon: <SiNextdotjs className="text-4xl text-gray-800 dark:text-white" />
+    },
+    {
+      title: "Desktop Application Development",
+      description: "Developing cross-platform desktop applications using Electron and other modern technologies.",
+      icon: <FaReact className="text-4xl text-blue-400" />
+    },
+    {
+      title: "Custom Software Solutions",
+      description: "Tailored software development to meet specific business needs and requirements.",
+      icon: <FaNodeJs className="text-4xl text-green-500" />
+    }
+  ]
+
   return (
     <section id="skills" className="py-20 px-4 bg-gray-50 dark:bg-gray-800">
       <div className="container mx-auto">
@@ -41,6 +67,22 @@ const Skills = () => {
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
             I've honed a diverse set of skills across development, design, and digital marketing to deliver comprehensive digital solutions.
           </p>
+        </div>
+
+        {/* Development Areas Section */}
+        <div className="mb-16 bg-white dark:bg-gray-900 p-8 rounded-xl shadow-lg">
+          <h3 className="text-xl font-semibold mb-8 text-gray-800 dark:text-white text-center">Development Expertise</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {developmentAreas.map((area, index) => (
+              <div key={index} className="text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-lg hover:shadow-md transition">
+                <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900/50 rounded-full flex items-center justify-center mx-auto mb-4">
+                  {area.icon}
+                </div>
+                <h4 className="font-medium text-xl text-gray-800 dark:text-white mb-2">{area.title}</h4>
+                <p className="text-gray-600 dark:text-gray-400">{area.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

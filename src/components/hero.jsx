@@ -24,45 +24,43 @@ const Hero = () => {
               Software Developer & Digital Marketer
             </h2>
             <p className="text-lg mb-8 text-gray-600 dark:text-gray-400 max-w-lg">
-              I build exceptional digital experiences and help businesses grow through innovative web solutions and strategic digital marketing.
+              I build exceptional digital experiences and help businesses grow through innovative web,mobile apps solutions and strategic digital marketing.
             </p>
             <div className="flex flex-wrap gap-4">
               <a 
-                href="#contact" 
+                href="https://wa.link/njy4s1" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition shadow-lg hover:shadow-blue-500/30"
               >
-                Hire Me
+                Contact Me
               </a>
-              <a 
+              {/* <a 
                 href="/resume.pdf" 
-                download 
+                download="Zain-Tahir-Resume.pdf"
                 className="px-6 py-3 border border-blue-600 text-blue-600 hover:bg-blue-50 dark:hover:bg-gray-800 rounded-lg font-medium transition flex items-center gap-2"
               >
                 Download CV <FiDownload />
-              </a>
+              </a> */}
             </div>
           </div>
           
           <div className="md:w-1/2 flex justify-center animate-fade-in delay-100">
             <div className="relative">
               <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-blue-500 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-xl">
-                {/* Replace with your actual image */}
-                <div className="w-full h-full bg-gray-300 flex items-center justify-center">
-                  {/* <span className="text-gray-500">Your Photo</span> */}
-                  <img src={personalImage} />
-                </div>
+                <img src={personalImage} alt="Zain Tahir" className="w-full h-full object-cover" />
               </div>
               <div className="absolute -bottom-4 -right-4 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700">
                 <div className="flex items-center">
                   <div className="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
-                  <span className="text-sm font-medium">Available for work</span>
+                  <span className="text-sm font-medium text-white">Available for work</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="mt-16 animate-fade-in delay-200">
+        {/* <div className="mt-16 animate-fade-in delay-200">
           <div className="flex justify-center space-x-6">
             <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition text-2xl">
               <FaGithub />
@@ -80,7 +78,7 @@ const Hero = () => {
               <HiOutlineMail />
             </a>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   )
